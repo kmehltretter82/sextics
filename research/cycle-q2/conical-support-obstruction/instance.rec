@@ -1,0 +1,8 @@
+# Exact mathematical target; acceptance is derived from a checked, merged proposal.
+id: cycle-q2
+title: Cyclic coupling · pole order two
+q: 2
+F: X0**6 + X0**3*X1*Y0*Y1/2 + X0*X2**3*Y0*Y2/2 + X1**6 + X1**3*X2*Y1*Y2/2 + X2**6 + Y0**6 + Y1**6 + Y2**6
+A: X0**2*X1**2*X2**3*Y0**2*Y1**2*Y2
+rationale: why.md
+provenanceFile: provenance.json

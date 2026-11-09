@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "instance_sha256": "65b5a2016eaf7ee67501171c55e9dc6cc10f67f1c0add176dcfcacb95f02e420",
+  "certificate_sha256": "16322ffbbb8898e38d02866dda1134e332857cdc411920fb1cf73743203521bd",
+  "functional_terms": 1817,
+  "adjoint_nontrivial_candidates_per_component": [
+    516,
+    485,
+    495,
+    507,
+    495,
+    492
+  ],
+  "normal_degree_bound": 12,
+  "numerator_degree": 19,
+  "rhs_pairing": "-181809248998817750726782174201359954845092274641038819877996994945988140354420193401866922381709052722716670748262400",
+  "interpretation": "The functional vanishes on every degree-19 numerator monomial with Y2 degree below 12, without symmetry assumptions."
+}

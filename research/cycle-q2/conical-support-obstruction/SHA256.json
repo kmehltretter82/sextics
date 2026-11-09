@@ -1,0 +1,8 @@
+{
+  "ADJOINT_VERIFICATION.json": "4ad54ffe3b31bf51f5812b0b7397d5c381bc65f795b98539658df73d4b3d5a1a",
+  "README.md": "6b67c21c605cc7cad289459d97f26584f59f9e8d1e918b25701a3deb587c7d00",
+  "fixed_cone_m2.json": "16322ffbbb8898e38d02866dda1134e332857cdc411920fb1cf73743203521bd",
+  "fixed_cone_search.py": "8141928cd564a74b89461618b4f566b171de62ec4d77bbc3423b99058d539ac2",
+  "instance.rec": "65b5a2016eaf7ee67501171c55e9dc6cc10f67f1c0add176dcfcacb95f02e420",
+  "verify_dual_adjoint.py": "bd1f112279599c3e1b0748d1f9dd592ec8a63c521fac2f56c90482973dfd74d5"
+}
