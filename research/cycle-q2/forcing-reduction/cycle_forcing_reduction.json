@@ -1,0 +1,70 @@
+{
+  "status": "partial progress only; no rational solution of the remaining PDE supplied",
+  "provenance": "https://github.com/hodge-computer/sextics/pull/223#issuecomment-6712406587",
+  "chart": "X2=1; x=X0, p=X1, z=Y0, q=Y1, y=Y2",
+  "c": "p**3*q/2 + x*z/2",
+  "f": "p**6 + p*q*x**3*z/2 + q**6 + x**6 + z**6 + 1",
+  "a": "p**2*q**2*x**2*z**2",
+  "h": "p*q*x**3*z + 6*x**6 - 6*z**6",
+  "lambda": "8*p**2*q**2*x**6*z**2 + 192*p*q*x**9*z + 672*p*q*x**3*z**7 + 2592*x**12 + 10368*x**6*z**6 + 2592*z**12",
+  "sigma": "p**2*q**2*x**2*z**2*(8*p**2*q**2*x**6*z**2 + 192*p*q*x**9*z + 672*p*q*x**3*z**7 + 2592*x**12 + 10368*x**6*z**6 + 2592*z**12)/(2*(p*q*x**3*z + 6*x**6 - 6*z**6)**4)",
+  "b_c": [
+    "-(p*q*x**3 + 12*z**5)/(p*q*x**3*z + 6*x**6 - 6*z**6)",
+    "0",
+    "3*x**2*(p*q*z + 4*x**3)/(p*q*x**3*z + 6*x**6 - 6*z**6)",
+    "0"
+  ],
+  "new_forcing_numerator_P": "16*p**2*q**2*x*z*(p**4*q**4*x**12*z**4 + 36*p**3*q**3*x**15*z**3 + 612*p**3*q**3*x**9*z**9 + 288*p**2*q**2*x**18*z**2 + 17208*p**2*q**2*x**12*z**8 + 14472*p**2*q**2*x**6*z**14 + 9072*p*q*x**21*z + 183168*p*q*x**15*z**7 + 288144*p*q*x**9*z**13 + 44496*p*q*x**3*z**19 + 11664*x**24 + 443232*x**18*z**6 + 1189728*x**12*z**12 + 443232*x**6*z**18 + 11664*z**24)",
+  "new_forcing_denominator": "h**6",
+  "new_forcing": "-(P/h**6) * (1,0,0,0,0)^T",
+  "current_translation": "u_j -> u_j - sigma*b_c[j]*(1,0,0,0,0)^T",
+  "identity": "sum_j delta_j(sigma*b_c[j]*y) = (P/h**6)*y - sigma*y/g",
+  "P_monomials": 15,
+  "nonzero_test": {
+    "point": {
+      "x": 1,
+      "p": 1,
+      "z": 1,
+      "q": 1
+    },
+    "h": "1",
+    "P": "42512272"
+  },
+  "discriminant": "Delta=46656*f**5-3125*c**6",
+  "critical_parameterization": "c=-6*r**5, f=5*r**6, r!=0",
+  "residue_outer_vectors": {
+    "v": [
+      "1",
+      "1/r",
+      "r**(-2)",
+      "r**(-3)",
+      "r**(-4)"
+    ],
+    "w": [
+      "1/30",
+      "r/15",
+      "r**2/10",
+      "2*r**3/15",
+      "r**4/6"
+    ]
+  },
+  "residue_identities": [
+    "R=v*w^T",
+    "rank R=1",
+    "trace R=1/2",
+    "R^2=R/2",
+    "trace B_t = (partial_t Delta)/(2 Delta)",
+    "residue_f(y/g) = -r*v/30"
+  ],
+  "checks": [
+    "universal connection reconstructed independently",
+    "connection flatness",
+    "both transverse residues",
+    "forcing residue projector",
+    "exact physical coefficient binding",
+    "physical b_c(c)=1 and b_c(f)=0",
+    "literal rational transgression identity",
+    "all coefficient and denominator derivatives",
+    "exact protected instance.rec F, A and pole order binding"
+  ]
+}
