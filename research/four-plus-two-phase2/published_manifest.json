@@ -15,6 +15,10 @@
     "HodgeComputerFourPlusTwoSymmetry": {
       "definition_id": "11c51e04-6e7b-40ce-ac7a-d79140045128",
       "job_id": "9e7a7e82-1cbd-47d4-95c5-e880d8ebee18"
+    },
+    "HodgeComputerFourPlusTwoSourceAlgebra": {
+      "definition_id": "8991740f-fa0e-4246-8578-dcbda2ecd5c7",
+      "job_id": "e6fd7cb3-1d36-4085-9ad4-6a4fc9f3fe54"
     }
   },
   "theorems": {
@@ -81,6 +85,18 @@
     "HodgeComputer.FourPlusTwoResidual.bipartiteCoreCertificate": {
       "theorem_id": "4341466c-3ef6-4249-8e58-48a91f72894d",
       "job_id": "0c6635cc-a010-4a99-8a18-2e8456b4054d"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreCertificateFor_algebra": {
+      "theorem_id": "c07e1cd3-2756-45dc-9bfe-a3bcd922a05c",
+      "job_id": "09b30a26-735d-48c3-b077-02e1054553c1"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreSource_not_polyExact": {
+      "theorem_id": "85dc80bf-f6a3-4e0d-8a73-574517905aad",
+      "job_id": "45e3c802-08f2-4a63-9f7e-553826bb496c"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificateFor_iff_linearSystem": {
+      "theorem_id": "f84d7ecd-5bdb-4e78-a993-699b645db74c",
+      "job_id": "27a73199-b064-442a-b40c-ace5720a576e"
     }
   },
   "direct_proofs": {
@@ -132,6 +148,21 @@
     "HodgeComputer.FourPlusTwoResidual.no_low_degree_or_scalar_core_certificate": {
       "submission_id": "e2ff3943-ceb9-4068-b56f-2ae7f8c8c50e",
       "theorem_id": "5d434242-0ae6-4eba-90f4-92543c2a60a0",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreCertificateFor_algebra": {
+      "submission_id": "8c6d2034-852f-40e9-9c62-e7d3f939733f",
+      "theorem_id": "c07e1cd3-2756-45dc-9bfe-a3bcd922a05c",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificateFor_iff_linearSystem": {
+      "submission_id": "a70a3580-8781-4e74-a7d1-f9fde5464b6b",
+      "theorem_id": "f84d7ecd-5bdb-4e78-a993-699b645db74c",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreSource_not_polyExact": {
+      "submission_id": "a1621113-6bbc-4e7a-be84-5587206bd1d6",
+      "theorem_id": "85dc80bf-f6a3-4e0d-8a73-574517905aad",
       "status": "ACCEPTED"
     }
   },
@@ -411,7 +442,14 @@
         "login": "kmehltretter82"
       }
     },
-    "packet_url": "https://github.com/kmehltretter82/sextics/tree/research/reflection-chart-and-core-deg6/research/prove2me-reflection-and-deg6"
+    "packet_url": "https://github.com/kmehltretter82/sextics/tree/research/reflection-chart-and-core-deg6/research/prove2me-reflection-and-deg6",
+    "four-plus-two-phase2": {
+      "id": "DC_kwDOVLOOJc4BLgAE",
+      "url": "https://github.com/hodge-computer/sextics/discussions/120#discussioncomment-19791876",
+      "author": {
+        "login": "kmehltretter82"
+      }
+    }
   },
   "four_plus_two_phase2_comment": {
     "mission_id": "943587a6-8b99-482d-bd65-2c7c156ea445",
@@ -522,5 +560,12 @@
         "status": "Open"
       }
     ]
+  },
+  "phase2_packet_url": "https://github.com/kmehltretter82/sextics/tree/research/reflection-chart-and-core-deg6/research/four-plus-two-phase2",
+  "phase2_packet_sha": "321f9ee4f9fae1513cb010936cccedbe1a4f5724",
+  "four_plus_two_phase3_comment": {
+    "mission_id": "943587a6-8b99-482d-bd65-2c7c156ea445",
+    "comment_id": "35edf6d4-8af6-4701-a634-f13d73c67521",
+    "references_count": 7
   }
 }
