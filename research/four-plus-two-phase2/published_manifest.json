@@ -1,0 +1,526 @@
+{
+  "definitions": {
+    "HodgeComputerReflectionChart": {
+      "definition_id": "4c393496-8d4f-4c2a-bebe-51b77cc74925",
+      "job_id": "fc02a53a-db75-419d-9314-ab8766a7eae0"
+    },
+    "HodgeComputerSymmetricChart": {
+      "definition_id": "5ab56686-5301-4e2d-9cd5-cc30c7598706",
+      "job_id": "df10731c-f124-416e-82ea-2ca4fcb345b0"
+    },
+    "HodgeComputerDiagonalPermutationQuotient": {
+      "definition_id": "fa3ae37c-9cbe-44af-9e92-a9ec62573c91",
+      "job_id": "3977d53a-c2f1-4794-bdb1-da3f07b21265"
+    },
+    "HodgeComputerFourPlusTwoSymmetry": {
+      "definition_id": "11c51e04-6e7b-40ce-ac7a-d79140045128",
+      "job_id": "9e7a7e82-1cbd-47d4-95c5-e880d8ebee18"
+    }
+  },
+  "theorems": {
+    "HodgeComputer.FourPlusTwoResidual.degreeSix_coreCertificate_iff_strict": {
+      "theorem_id": "e9e09848-70c4-4d05-b1af-3c6a6342d107",
+      "job_id": "599df309-6fbf-4fbc-9f1c-12f56cb546b7"
+    },
+    "HodgeComputer.ReflectionChart.certificate_of_relative_primitive": {
+      "theorem_id": "62cd9479-5060-4477-af7f-35c19b081f1d",
+      "job_id": "bd63d461-bb61-4e88-bb1f-955ed7e6712c"
+    },
+    "HodgeComputer.ReflectionChart.relative_primitive_of_canonical_trace": {
+      "theorem_id": "50907190-8358-42f0-ac43-d647e3439a5b",
+      "job_id": "d2b14d16-9aa3-4d8a-a323-79059020b178"
+    },
+    "HodgeComputer.SymmetricSexticResidual.chart_and_target_irreducible": {
+      "theorem_id": "d9a76ddf-3d60-4cb0-82af-3f471b6c1e11",
+      "job_id": "8bdd1668-7359-4088-8e44-974e84399b25"
+    },
+    "HodgeComputer.SymmetricSexticResidual.canonical_trace_primitive_exists": {
+      "theorem_id": "2367d2bd-2d1d-4838-bc6c-51a5c3fef2f5",
+      "job_id": "faa85ac3-9cfc-44ab-b569-fcef17a609b9"
+    },
+    "HodgeComputer.DiagonalPermutation.transposition_quotient_certificate": {
+      "theorem_id": "b4cd047c-1b0d-4ece-b89e-5e42a0d6f2ad",
+      "job_id": "65291969-f436-47a0-98f8-97c31cbd0f25"
+    },
+    "HodgeComputer.DiagonalPermutation.chart_and_target_irreducible": {
+      "theorem_id": "61adb094-0105-41c3-9e23-65eca6c96e25",
+      "job_id": "064fd964-dcca-4b27-a18b-241bf6fa6a8b"
+    },
+    "HodgeComputer.SymmetricSexticResidual.relative_primitive_exists": {
+      "theorem_id": "03107a27-44a7-4b8d-b3b9-5e0df9b35d76",
+      "job_id": "07427aa4-467c-4939-bc72-005af22c0552"
+    },
+    "HodgeComputer.DiagonalPermutation.relative_primitive_exists": {
+      "theorem_id": "be837ebc-df31-4066-b8c0-1a4fe0c68de2",
+      "job_id": "ae11834a-0352-4133-9861-671703204e5f"
+    },
+    "HodgeComputer.DiagonalPermutation.canonical_trace_primitive_exists": {
+      "theorem_id": "13825172-87ae-4f8e-9f1d-052f8c828089",
+      "job_id": "c8e0ead4-0a49-4f23-8609-c1fe293c32b8"
+    },
+    "HodgeComputer.FourPlusTwoResidual.core_irreducible": {
+      "theorem_id": "6f98d9af-b7a2-41c5-9179-54eef711d63d",
+      "job_id": "d5b76d6a-0be4-43d7-b069-843ba61ca5bc"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificate_iff_strict": {
+      "theorem_id": "36ac7eff-e9cb-4a09-9c3d-ea56f2e0892b",
+      "job_id": "7ba63242-4475-440b-aa7e-b6d024932e00"
+    },
+    "HodgeComputer.FourPlusTwoResidual.no_low_degree_or_scalar_core_certificate": {
+      "theorem_id": "5d434242-0ae6-4eba-90f4-92543c2a60a0",
+      "job_id": "b572a9df-f779-4358-b98a-4d215a7a2e47"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreCertificate_iff_bipartite": {
+      "theorem_id": "869e4fa2-7a9d-4b62-a2a5-3a7fe862452b",
+      "job_id": "383d25bb-ad01-4e78-814a-25861931168b"
+    },
+    "HodgeComputer.FourPlusTwoResidual.normalChart_residue_of_coreCertificate": {
+      "theorem_id": "5f8e0726-2721-43c9-a74a-c9e0e987f824",
+      "job_id": "855a6a4f-d517-4ab5-a3f3-45a46403c8d3"
+    },
+    "HodgeComputer.FourPlusTwoResidual.bipartiteCoreCertificate": {
+      "theorem_id": "4341466c-3ef6-4249-8e58-48a91f72894d",
+      "job_id": "0c6635cc-a010-4a99-8a18-2e8456b4054d"
+    }
+  },
+  "direct_proofs": {
+    "HodgeComputer.FourPlusTwoResidual.degreeSix_coreCertificate_iff_strict": {
+      "submission_id": "65c9bcdf-1164-493e-919a-3dab73100156",
+      "theorem_id": "e9e09848-70c4-4d05-b1af-3c6a6342d107",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.ReflectionChart.relative_primitive_of_canonical_trace": {
+      "submission_id": "3bae39ee-e221-4675-8297-e4e0b969d4cd",
+      "theorem_id": "50907190-8358-42f0-ac43-d647e3439a5b",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.SymmetricSexticResidual.chart_and_target_irreducible": {
+      "submission_id": "f65520f6-1ae6-4982-8083-41f1318cbe33",
+      "theorem_id": "d9a76ddf-3d60-4cb0-82af-3f471b6c1e11",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.DiagonalPermutation.chart_and_target_irreducible": {
+      "submission_id": "c2db8c9e-dbaf-49d7-929c-91941297add2",
+      "theorem_id": "61adb094-0105-41c3-9e23-65eca6c96e25",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.ReflectionChart.certificate_of_relative_primitive": {
+      "submission_id": "5d6838f1-7f0b-40a2-80d9-9dc0d9345b25",
+      "theorem_id": "62cd9479-5060-4477-af7f-35c19b081f1d",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.core_irreducible": {
+      "submission_id": "508b752b-ebd1-4528-a49e-a37536d76fa2",
+      "theorem_id": "6f98d9af-b7a2-41c5-9179-54eef711d63d",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coreCertificate_iff_bipartite": {
+      "submission_id": "fd809a5d-2b1c-48ec-95e6-627acc29acf3",
+      "theorem_id": "869e4fa2-7a9d-4b62-a2a5-3a7fe862452b",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificate_iff_strict": {
+      "submission_id": "b55d06b2-1c88-448b-b379-369c588014f8",
+      "theorem_id": "36ac7eff-e9cb-4a09-9c3d-ea56f2e0892b",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.normalChart_residue_of_coreCertificate": {
+      "submission_id": "83bdfb8e-2661-479f-8cf7-e1dda1aaf525",
+      "theorem_id": "5f8e0726-2721-43c9-a74a-c9e0e987f824",
+      "status": "ACCEPTED"
+    },
+    "HodgeComputer.FourPlusTwoResidual.no_low_degree_or_scalar_core_certificate": {
+      "submission_id": "e2ff3943-ceb9-4068-b56f-2ae7f8c8c50e",
+      "theorem_id": "5d434242-0ae6-4eba-90f4-92543c2a60a0",
+      "status": "ACCEPTED"
+    }
+  },
+  "sketches": {
+    "Sketch_DiagonalPermutation_certificate": {
+      "submission_id": "52ac1c5a-5379-413b-8040-844d5f17d21b",
+      "theorem_id": "be901a67-adc3-4525-b8cd-0c5eff1d3727",
+      "target_name": "HodgeComputer.DiagonalPermutation.certificate",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_SymmetricSexticResidual_certificate": {
+      "submission_id": "c763cf9d-67b7-4e66-bfdb-87d7c4012036",
+      "theorem_id": "799e785b-ddce-4562-b682-39cbf72890b9",
+      "target_name": "HodgeComputer.SymmetricSexticResidual.certificate",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_SymmetricSexticResidual_relative_primitive_exists": {
+      "submission_id": "b6dbb68b-b207-4d9d-8105-76c7da362b89",
+      "theorem_id": "03107a27-44a7-4b8d-b3b9-5e0df9b35d76",
+      "target_name": "HodgeComputer.SymmetricSexticResidual.relative_primitive_exists",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_DiagonalPermutation_transposition_quotient_certificate": {
+      "submission_id": "e92ae65a-f85e-4609-9084-f05fc6e0e766",
+      "theorem_id": "b4cd047c-1b0d-4ece-b89e-5e42a0d6f2ad",
+      "target_name": "HodgeComputer.DiagonalPermutation.transposition_quotient_certificate",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_DiagonalPermutation_relative_primitive_exists": {
+      "submission_id": "661c2cb3-d64e-4d38-b026-aa4242b9a113",
+      "theorem_id": "be837ebc-df31-4066-b8c0-1a4fe0c68de2",
+      "target_name": "HodgeComputer.DiagonalPermutation.relative_primitive_exists",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_FourPlusTwoResidual_coreCertificate": {
+      "submission_id": "431e705a-6274-44f8-b08c-ea82e8e1117f",
+      "theorem_id": "9fb47380-f045-4b39-825f-3a61dac79c73",
+      "target_name": "HodgeComputer.FourPlusTwoResidual.coreCertificate",
+      "status": "SKETCH_ACCEPTED"
+    },
+    "Sketch_FourPlusTwoResidual_normalChart_residue_solvable": {
+      "submission_id": "9fc092e8-13ae-4a66-97c1-fadc30050567",
+      "theorem_id": "14e31792-5e53-4d39-89a0-9b2d0ef8c54e",
+      "target_name": "HodgeComputer.FourPlusTwoResidual.normalChart_residue_solvable",
+      "status": "SKETCH_ACCEPTED"
+    }
+  },
+  "mission_comments": {
+    "2d84c870-d944-4061-aad3-776e16417108": {
+      "comment_id": "2fc09c29-ee30-4a9f-9ef5-87a0efe46f2c",
+      "references_count": 14,
+      "references": [
+        {
+          "type": "definition",
+          "id": "4c393496-8d4f-4c2a-bebe-51b77cc74925",
+          "name": "HodgeComputerReflectionChart",
+          "status": "Definition"
+        },
+        {
+          "type": "definition",
+          "id": "5ab56686-5301-4e2d-9cd5-cc30c7598706",
+          "name": "HodgeComputerSymmetricChart",
+          "status": "Definition"
+        },
+        {
+          "type": "sketch",
+          "id": "b6dbb68b-b207-4d9d-8105-76c7da362b89",
+          "name": "HodgeComputer.SymmetricSexticResidual.relative_primitive_exists",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "03107a27-44a7-4b8d-b3b9-5e0df9b35d76"
+        },
+        {
+          "type": "sketch",
+          "id": "c763cf9d-67b7-4e66-bfdb-87d7c4012036",
+          "name": "HodgeComputer.SymmetricSexticResidual.certificate",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "799e785b-ddce-4562-b682-39cbf72890b9"
+        },
+        {
+          "type": "solution",
+          "id": "3bae39ee-e221-4675-8297-e4e0b969d4cd",
+          "name": "HodgeComputer.ReflectionChart.relative_primitive_of_canonical_trace",
+          "status": "ACCEPTED",
+          "parent_theorem_id": "50907190-8358-42f0-ac43-d647e3439a5b"
+        },
+        {
+          "type": "solution",
+          "id": "5d6838f1-7f0b-40a2-80d9-9dc0d9345b25",
+          "name": "HodgeComputer.ReflectionChart.certificate_of_relative_primitive",
+          "status": "ACCEPTED",
+          "parent_theorem_id": "62cd9479-5060-4477-af7f-35c19b081f1d"
+        },
+        {
+          "type": "solution",
+          "id": "f65520f6-1ae6-4982-8083-41f1318cbe33",
+          "name": "HodgeComputer.SymmetricSexticResidual.chart_and_target_irreducible",
+          "status": "ACCEPTED",
+          "parent_theorem_id": "d9a76ddf-3d60-4cb0-82af-3f471b6c1e11"
+        },
+        {
+          "type": "theorem",
+          "id": "03107a27-44a7-4b8d-b3b9-5e0df9b35d76",
+          "name": "HodgeComputer.SymmetricSexticResidual.relative_primitive_exists",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "06ef0f15-636c-459e-8966-2dc0538061ef",
+          "name": "HodgeComputer.SymmetricSexticResidual.removable_selector_moment",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "2367d2bd-2d1d-4838-bc6c-51a5c3fef2f5",
+          "name": "HodgeComputer.SymmetricSexticResidual.canonical_trace_primitive_exists",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "50907190-8358-42f0-ac43-d647e3439a5b",
+          "name": "HodgeComputer.ReflectionChart.relative_primitive_of_canonical_trace",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "62cd9479-5060-4477-af7f-35c19b081f1d",
+          "name": "HodgeComputer.ReflectionChart.certificate_of_relative_primitive",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "b0bcfd4c-df00-43b3-9114-86ccae7d0db6",
+          "name": "HodgeComputer.SymmetricSexticResidual.canonical_trace_source",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "d9a76ddf-3d60-4cb0-82af-3f471b6c1e11",
+          "name": "HodgeComputer.SymmetricSexticResidual.chart_and_target_irreducible",
+          "status": "Proved"
+        }
+      ]
+    },
+    "cc0cd35f-837a-4882-acaf-0a6da9381522": {
+      "comment_id": "966ef7c7-bad7-4bfb-9bae-9a9e4db648d7",
+      "references_count": 13,
+      "references": [
+        {
+          "type": "definition",
+          "id": "fa3ae37c-9cbe-44af-9e92-a9ec62573c91",
+          "name": "HodgeComputerDiagonalPermutationQuotient",
+          "status": "Definition"
+        },
+        {
+          "type": "sketch",
+          "id": "52ac1c5a-5379-413b-8040-844d5f17d21b",
+          "name": "HodgeComputer.DiagonalPermutation.certificate",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "be901a67-adc3-4525-b8cd-0c5eff1d3727"
+        },
+        {
+          "type": "sketch",
+          "id": "661c2cb3-d64e-4d38-b026-aa4242b9a113",
+          "name": "HodgeComputer.DiagonalPermutation.relative_primitive_exists",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "be837ebc-df31-4066-b8c0-1a4fe0c68de2"
+        },
+        {
+          "type": "sketch",
+          "id": "e92ae65a-f85e-4609-9084-f05fc6e0e766",
+          "name": "HodgeComputer.DiagonalPermutation.transposition_quotient_certificate",
+          "status": "SKETCH_ACCEPTED",
+          "parent_theorem_id": "b4cd047c-1b0d-4ece-b89e-5e42a0d6f2ad"
+        },
+        {
+          "type": "solution",
+          "id": "c2db8c9e-dbaf-49d7-929c-91941297add2",
+          "name": "HodgeComputer.DiagonalPermutation.chart_and_target_irreducible",
+          "status": "ACCEPTED",
+          "parent_theorem_id": "61adb094-0105-41c3-9e23-65eca6c96e25"
+        },
+        {
+          "type": "theorem",
+          "id": "13825172-87ae-4f8e-9f1d-052f8c828089",
+          "name": "HodgeComputer.DiagonalPermutation.canonical_trace_primitive_exists",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "50907190-8358-42f0-ac43-d647e3439a5b",
+          "name": "HodgeComputer.ReflectionChart.relative_primitive_of_canonical_trace",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "61adb094-0105-41c3-9e23-65eca6c96e25",
+          "name": "HodgeComputer.DiagonalPermutation.chart_and_target_irreducible",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "62cd9479-5060-4477-af7f-35c19b081f1d",
+          "name": "HodgeComputer.ReflectionChart.certificate_of_relative_primitive",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "b4cd047c-1b0d-4ece-b89e-5e42a0d6f2ad",
+          "name": "HodgeComputer.DiagonalPermutation.transposition_quotient_certificate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "be837ebc-df31-4066-b8c0-1a4fe0c68de2",
+          "name": "HodgeComputer.DiagonalPermutation.relative_primitive_exists",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "be9b7f88-8da6-4d8d-803a-f2d43fe9796d",
+          "name": "HodgeComputer.Verify.signed_coordinate_transport",
+          "status": "Proved"
+        },
+        {
+          "type": "theorem",
+          "id": "fd55d187-3dab-404c-9cf5-5c1dec0e9335",
+          "name": "HodgeComputer.HasCertificate.finite_linear_combination",
+          "status": "Proved"
+        }
+      ]
+    },
+    "943587a6-8b99-482d-bd65-2c7c156ea445": {
+      "comment_id": "a8990475-b25e-45c5-95ef-7c97ee6151fb",
+      "references_count": 3,
+      "references": [
+        {
+          "type": "solution",
+          "id": "65c9bcdf-1164-493e-919a-3dab73100156",
+          "name": "HodgeComputer.FourPlusTwoResidual.degreeSix_coreCertificate_iff_strict",
+          "status": "ACCEPTED",
+          "parent_theorem_id": "e9e09848-70c4-4d05-b1af-3c6a6342d107"
+        },
+        {
+          "type": "theorem",
+          "id": "9fb47380-f045-4b39-825f-3a61dac79c73",
+          "name": "HodgeComputer.FourPlusTwoResidual.coreCertificate",
+          "status": "Open"
+        },
+        {
+          "type": "theorem",
+          "id": "e9e09848-70c4-4d05-b1af-3c6a6342d107",
+          "name": "HodgeComputer.FourPlusTwoResidual.degreeSix_coreCertificate_iff_strict",
+          "status": "Proved"
+        }
+      ]
+    }
+  },
+  "github_discussions": {
+    "diagonal-permutation": {
+      "id": "DC_kwDOVLOOJc4BLfai",
+      "url": "https://github.com/hodge-computer/sextics/discussions/177#discussioncomment-19789474",
+      "author": {
+        "login": "kmehltretter82"
+      }
+    },
+    "four-plus-two-residual": {
+      "id": "DC_kwDOVLOOJc4BLfak",
+      "url": "https://github.com/hodge-computer/sextics/discussions/120#discussioncomment-19789476",
+      "author": {
+        "login": "kmehltretter82"
+      }
+    },
+    "symmetric-sextic-residual": {
+      "id": "DC_kwDOVLOOJc4BLfam",
+      "url": "https://github.com/hodge-computer/sextics/discussions/117#discussioncomment-19789478",
+      "author": {
+        "login": "kmehltretter82"
+      }
+    },
+    "packet_url": "https://github.com/kmehltretter82/sextics/tree/research/reflection-chart-and-core-deg6/research/prove2me-reflection-and-deg6"
+  },
+  "four_plus_two_phase2_comment": {
+    "mission_id": "943587a6-8b99-482d-bd65-2c7c156ea445",
+    "comment_id": "3c200490-2b87-48e5-963f-161197454433",
+    "references_count": 16,
+    "references": [
+      {
+        "type": "definition",
+        "id": "11c51e04-6e7b-40ce-ac7a-d79140045128",
+        "name": "HodgeComputerFourPlusTwoSymmetry",
+        "status": "Definition"
+      },
+      {
+        "type": "sketch",
+        "id": "431e705a-6274-44f8-b08c-ea82e8e1117f",
+        "name": "HodgeComputer.FourPlusTwoResidual.coreCertificate",
+        "status": "SKETCH_ACCEPTED",
+        "parent_theorem_id": "9fb47380-f045-4b39-825f-3a61dac79c73"
+      },
+      {
+        "type": "sketch",
+        "id": "9fc092e8-13ae-4a66-97c1-fadc30050567",
+        "name": "HodgeComputer.FourPlusTwoResidual.normalChart_residue_solvable",
+        "status": "SKETCH_ACCEPTED",
+        "parent_theorem_id": "14e31792-5e53-4d39-89a0-9b2d0ef8c54e"
+      },
+      {
+        "type": "solution",
+        "id": "508b752b-ebd1-4528-a49e-a37536d76fa2",
+        "name": "HodgeComputer.FourPlusTwoResidual.core_irreducible",
+        "status": "ACCEPTED",
+        "parent_theorem_id": "6f98d9af-b7a2-41c5-9179-54eef711d63d"
+      },
+      {
+        "type": "solution",
+        "id": "83bdfb8e-2661-479f-8cf7-e1dda1aaf525",
+        "name": "HodgeComputer.FourPlusTwoResidual.normalChart_residue_of_coreCertificate",
+        "status": "ACCEPTED",
+        "parent_theorem_id": "5f8e0726-2721-43c9-a74a-c9e0e987f824"
+      },
+      {
+        "type": "solution",
+        "id": "b55d06b2-1c88-448b-b379-369c588014f8",
+        "name": "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificate_iff_strict",
+        "status": "ACCEPTED",
+        "parent_theorem_id": "36ac7eff-e9cb-4a09-9c3d-ea56f2e0892b"
+      },
+      {
+        "type": "solution",
+        "id": "e2ff3943-ceb9-4068-b56f-2ae7f8c8c50e",
+        "name": "HodgeComputer.FourPlusTwoResidual.no_low_degree_or_scalar_core_certificate",
+        "status": "ACCEPTED",
+        "parent_theorem_id": "5d434242-0ae6-4eba-90f4-92543c2a60a0"
+      },
+      {
+        "type": "solution",
+        "id": "fd809a5d-2b1c-48ec-95e6-627acc29acf3",
+        "name": "HodgeComputer.FourPlusTwoResidual.coreCertificate_iff_bipartite",
+        "status": "ACCEPTED",
+        "parent_theorem_id": "869e4fa2-7a9d-4b62-a2a5-3a7fe862452b"
+      },
+      {
+        "type": "theorem",
+        "id": "14e31792-5e53-4d39-89a0-9b2d0ef8c54e",
+        "name": "HodgeComputer.FourPlusTwoResidual.normalChart_residue_solvable",
+        "status": "Open"
+      },
+      {
+        "type": "theorem",
+        "id": "36ac7eff-e9cb-4a09-9c3d-ea56f2e0892b",
+        "name": "HodgeComputer.FourPlusTwoResidual.coprime_coreCertificate_iff_strict",
+        "status": "Proved"
+      },
+      {
+        "type": "theorem",
+        "id": "4341466c-3ef6-4249-8e58-48a91f72894d",
+        "name": "HodgeComputer.FourPlusTwoResidual.bipartiteCoreCertificate",
+        "status": "Open"
+      },
+      {
+        "type": "theorem",
+        "id": "5d434242-0ae6-4eba-90f4-92543c2a60a0",
+        "name": "HodgeComputer.FourPlusTwoResidual.no_low_degree_or_scalar_core_certificate",
+        "status": "Proved"
+      },
+      {
+        "type": "theorem",
+        "id": "5f8e0726-2721-43c9-a74a-c9e0e987f824",
+        "name": "HodgeComputer.FourPlusTwoResidual.normalChart_residue_of_coreCertificate",
+        "status": "Proved"
+      },
+      {
+        "type": "theorem",
+        "id": "6f98d9af-b7a2-41c5-9179-54eef711d63d",
+        "name": "HodgeComputer.FourPlusTwoResidual.core_irreducible",
+        "status": "Proved"
+      },
+      {
+        "type": "theorem",
+        "id": "869e4fa2-7a9d-4b62-a2a5-3a7fe862452b",
+        "name": "HodgeComputer.FourPlusTwoResidual.coreCertificate_iff_bipartite",
+        "status": "Proved"
+      },
+      {
+        "type": "theorem",
+        "id": "9fb47380-f045-4b39-825f-3a61dac79c73",
+        "name": "HodgeComputer.FourPlusTwoResidual.coreCertificate",
+        "status": "Open"
+      }
+    ]
+  }
+}

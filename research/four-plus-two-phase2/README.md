@@ -1,0 +1,26 @@
+# `four-plus-two-residual` Phase 2: All-Degree Strictness, Bipartite Reduction, Normal-Chart Suspension Bridge, Low-Degree/Scalar Exclusions, and Clairaut–Koszul Obstruction Tower
+
+Reproducible Lean 4 (`leanprover/lean4:v4.33.1`, Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`) proofs, Prove2Me mission reductions, and C++/Python computational diagnostics for `four-plus-two-residual` ([Discussion #120](https://github.com/hodge-computer/sextics/discussions/120), [Prove2Me Mission](https://prove2.me/missions/943587a6-8b99-482d-bd65-2c7c156ea445)).
+
+## 1. Unconditionally Verified Lean 4 Results Over $\mathbb{C}$
+
+All 5 direct proof modules in `Proofs/` compile with zero `sorry` and depend only on standard Lean axioms `[propext, Classical.choice, Quot.sound]`:
+
+- `Definitions/Def_HodgeComputerFourPlusTwoSymmetry.lean` (`HodgeComputerFourPlusTwoSymmetry`, `11c51e04-6e7b-40ce-ac7a-d79140045128`): defines `flipAB`, `flipCD`, `StrictCoreCertificate`, and `BipartiteCoreCertificate`.
+- `Proofs/Sol_core_irreducible.lean` ([`core_irreducible`](https://prove2.me/theorems/6f98d9af-b7a2-41c5-9179-54eef711d63d), `ACCEPTED` `508b752b-ebd1-4528-a49e-a37536d76fa2`): proves `Irreducible core` via monic Eisenstein specialization in $x_0$ at a simple complex root of $z^6 + \frac{5}{7} z^5 + \frac{15}{7} z + 1$.
+- `Proofs/Sol_coprime_coreCertificate_iff_strict.lean` ([`coprime_coreCertificate_iff_strict`](https://prove2.me/theorems/36ac7eff-e9cb-4a09-9c3d-ea56f2e0892b), `ACCEPTED` `b55d06b2-1c88-448b-b379-369c588014f8`): proves that for **every** homogeneous degree $k+1 \ge 1$ and any $D$ with `¬ (core ∣ D)`, `CoreCertificate D` is equivalent to `StrictCoreCertificate D` (`p · ∇H = A D` and `D div(p) - p · ∇D = 0`).
+- `Proofs/Sol_no_low_degree_or_scalar_core_certificate.lean` ([`no_low_degree_or_scalar_core_certificate`](https://prove2.me/theorems/5d434242-0ae6-4eba-90f4-92543c2a60a0), `ACCEPTED` `e2ff3943-ceb9-4068-b56f-2ae7f8c8c50e`): proves over $\mathbb{C}$ that (i) no scalar multiple $D = c H$ admits a `CoreCertificate`, (ii) every homogeneous degree-$6$ `CoreCertificate` satisfies $H \nmid D$ and admits a `StrictCoreCertificate`, and (iii) no homogeneous polynomial $D$ of degree $d \le 4$ admits a `CoreCertificate`.
+- `Proofs/Sol_coreCertificate_iff_bipartite.lean` ([`coreCertificate_iff_bipartite`](https://prove2.me/theorems/869e4fa2-7a9d-4b62-a2a5-3a7fe862452b), `ACCEPTED` `fd809a5d-2b1c-48ec-95e6-627acc29acf3`): proves `∃ D N, CoreCertificate D N ↔ ∃ D N, BipartiteCoreCertificate D N` via domain-safe rational averaging $\widehat{D} = 2 D (\sigma_{AB}^* D) \neq 0$.
+- `Proofs/Sol_normalChart_residue_of_coreCertificate.lean` ([`normalChart_residue_of_coreCertificate`](https://prove2.me/theorems/5f8e0726-2721-43c9-a74a-c9e0e987f824), `ACCEPTED` `83bdfb8e-2661-479f-8cf7-e1dda1aaf525`): proves that any four-variable `CoreCertificate` lifts via $S = 6 D H B$ to a coprime six-variable solution of `NormalChart.residue F A S W = F * Q`.
+- `Reductions/Sketch_FourPlusTwoResidual_coreCertificate.lean` (`SKETCH_ACCEPTED` `431e705a-6274-44f8-b08c-ea82e8e1117f`) and `Reductions/Sketch_FourPlusTwoResidual_normalChart_residue_solvable.lean` (`SKETCH_ACCEPTED` `9fc092e8-13ae-4a66-97c1-fadc30050567`): unify both open mission frontier leaves onto [`bipartiteCoreCertificate`](https://prove2.me/theorems/4341466c-3ef6-4249-8e58-48a91f72894d).
+
+## 2. Algebraic Clairaut–Koszul Tower & Computational Diagnostics (`cpp_diagnostics/`)
+
+*(Scope note: finite-degree modular ranks and numerical unit-sphere optimizations are diagnostic evidence on restricted ansätze, not proofs of unrestricted nonexistence.)*
+
+- `test_clairaut_tower.cpp`: implements the zero-$K$ Clairaut–Koszul elimination identity $B(D, K(\Omega)) = \sum_i V_i(D, \Omega) \partial_i H$ with $B(D, V(D, \Omega)) \equiv 0$, computing pure-$D$ determinantal ideal ranks on $E_1(6)$ over $\mathbb{F}_{10^9+7}$ (`16/231` quadrics, `355/1771` cubics, `3991/10626` quartics on `PURE_(1,1)` $n_D=21$; `16/406` quadrics with radical spanned solely by `core`, `464/4060` cubics on `PURE_(0,0)` $n_D=28$).
+- `check_deg6_convergence.cpp`: 300-iteration complex Levenberg–Marquardt on the unit sphere $\sum |c_i|^2 = 1$ at $\deg D = 6$; all starts converge to strictly positive minima (`3.0780e-02` on `PURE_(1,1)` $n_D=21$, `1.3364e-02` on `PURE_(0,0)` $n_D=28$ and on mixed-parity `FULL_ALL_49` $n_D=49, n_K=60$).
+- `solve_m1_and_covariant.cpp`: exact $\mathbb{F}_{10^9+7}$ Macaulay exclusions for $D = H D_0$ at $\deg D_0 \in \{1, 2\}$ (`10/10` at $k=2$, `56/56` and `20/20` at $k=3$) and exact inconsistency checks (`inconsistent = 1`) across 14 structured covariants up to degree $24$ (`H`, `H^2`, `f_a`, `f_c`, `f_a * f_c`, `H * f_a * f_c`, cubic-surface lift `H_cub`, `H * H_cub`, `H * a * c * H_cub`, `h1`, `H * h1`, `Hess4(H)`, `H * Hess4(H)`, `disc_cub`).
+- `search_strict_and_m1_higher.cpp` & `check_deg10_plateau.cpp`: true monomial-$L^2$-normalized complex LM diagnostics for strict $\deg D \in \{7,8,9,10\}$ and $D = H D_0$ with $\deg D_0 \in \{3,4,5\}$.
+
+Prepared for `kmehltretter82` with Antigravity (Gemini) assistance, crediting prior contributions by `benediamond`, `kejace`, `DiamondJM`, `xuanji`, and `shivm`.
