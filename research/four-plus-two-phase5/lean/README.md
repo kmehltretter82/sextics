@@ -30,6 +30,8 @@ the missing input.
 
 A verified four-variable identity with $D\ne0$ and arbitrary polynomial numerators now implies the protected statement directly. Multiply all inputs by $X_0$ if needed to give the lowest denominator component positive degree. If that component is $h$ of degree $d$, set $p=d+2$ and use the finite inverse series for $D$ against $h$. Its product with $D$ equals $h^p$ up to a term of strictly higher order. Taking the homogeneous component of the cleared identity in degree $2dp+6$ gives a homogeneous core witness with denominator $h^p$ and numerators of degree $dp+1$. The proof adapts the Phase 4 packet's expansion and uses the project's existing homogeneous-component and finite-inverse lemmas. The `hasCertificate_of_ungraded` theorem was independently replayed on upstream 4.36.0 with the standard three axioms. [Protected closure from an ungraded identity](UngradedCore.lean)
 
+The same result now accepts a rational vector field in the fraction field of $\mathbf C[a,b,c,d]$. The sole equation is $v(H)-\tfrac32H\operatorname{div}v=a^3c^3$, with the canonical extensions of the coordinate derivatives. Lean chooses a common denominator, differentiates the numerator equations, applies homogeneous extraction, and concludes the protected theorem. This implication also passed independent kernel replay on upstream Lean 4.36.0. [One-equation fraction-field endpoint](RationalCore.lean)
+
 ## Specialization along a pencil
 
 Suppose a current for $P+\varepsilon S$ has source with constant term $t^4$ and no negative powers of $\varepsilon$. Let $q_j$ be the coefficient at $\varepsilon^{-j}$, allowing a pole of order $m$. Expanding the identity gives
@@ -49,8 +51,8 @@ Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
 current fails for the catalogue core.
 
 On a Linux host with elan, Git, Python 3 and the standard Mathlib build tools,
-put the six Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
-`RatioTransport.lean`, `SpecializeCurrent.lean`, `UngradedCore.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
+put the seven Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
+`RatioTransport.lean`, `SpecializeCurrent.lean`, `UngradedCore.lean`, `RationalCore.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
 directory and run `bash upstream-check.sh`. The script pins upstream sextics
 `2388542bd16eb4df849515418e1c2ab291e6dc6a` and loads the toolchain and
 Mathlib revision specified by that checkout. `HodgeTarget.lean` was generated

@@ -2,8 +2,10 @@ import FourPlusTwoCertificate
 import RatioTransport
 import SpecializeCurrent
 import UngradedCore
+import RationalCore
 
 #print axioms FourPlusTwoCertificate.ofCoreCertificate
 #print axioms FourPlusTwoRatio.transport
 #print axioms FourPlusTwoSpecialization.specialize
 #print axioms FourPlusTwoCertificate.hasCertificate_of_ungraded
+#print axioms FourPlusTwoCertificate.hasCertificate_of_core_field

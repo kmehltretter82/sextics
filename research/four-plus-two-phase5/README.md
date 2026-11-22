@@ -10,11 +10,17 @@ The preceding packet computes the full normalized trace for the binary control a
 
 `FourPlusTwoCertificate.ofCoreCertificate` takes the four-variable polynomial identity together with its homogeneity conditions and constructs the six-variable certificate, including the coprimality proof. `FourPlusTwoRatio.transport` verifies the field transformation needed to use the chart equation. Both compiled and passed independent kernel replay on the upstream revision `2388542bd16eb4df849515418e1c2ab291e6dc6a` using Lean 4.36.0 on Linux and on the research toolchain using Lean 4.33.1. The reported axioms are `propext`, `Classical.choice`, and `Quot.sound`. The accompanying exact arithmetic check exercises a nonzero control and rejects its current on this coupled core. [Proofs and reproduction](lean/README.md)
 
+The homogeneous extraction theorem removes the grading assumptions on a cleared identity. Its fractional-field corollary takes a rational vector field satisfying the literal core equation with source $a^3c^3$ all the way to the protected certificate. A separate formal specialization result allows a finite Laurent pole when passing to the coupled member of the pencil. [Lean statements and checks](lean/README.md)
+
 ## Smaller equations for the coupled family
 
 On a smooth split quadric $Q_2$, the restriction $f=H-Q_1^3$ has bidegree $(6,6)$. A norm contact gives a factorization $f=h(w,z)h(-w,-z)$ with $h$ of bidegree $(3,3)$. Factoring two axis sextics gives finitely many choices. On the specified open set, three linear solves recover the remaining coefficients of $h$. Nine explicit equations in ten quadric parameters remain. The additional incidence at the prescribed ratios cuts out the moving fiber. At the normalized branch we recover all sixteen cubic coefficients through order two. The intrinsic Jacobian minor omitting the $a^2$ coefficient of $Q_1$ is $(5+19v)\tau+O(\tau^2)$, where $v^2=15$ modulo 23. This proves generic transversality there and also records the rank drop at the nodal seed. [Model, equations and tests](quadric/axis_model.md)
 
 For a fixed moving fiber we also remove the deck and sign choices. Writing $Z=\alpha^2=-U/V$ and $L=Q_1(1,r,\alpha,s\alpha)$, the normalized quadric $Q_1/L$ has value one at the moving point and $L^3=P(r,s,\alpha)$. This leaves nine parameters. The source for the prescribed input is invariant on all twelve presentations of a generic quotient point. An even moving equation gives an explicit formula there. On a selected component the degree reduction is governed by its stabilizer. [Quotient source and trace transfer](quadric/quotient-source.md) · [Four-edge reconstruction and fiber bounds](quadric/finite_chart.md)
+
+On the marked chart, eight equations in eight geometric parameters suffice on an explicit open set. A complete one-parameter slice at the marked seed over the algebraic closure of the field of eleven elements has exactly one simple solution across all 64 axis choices. This calculation leaves the degree and trace of the full moving fiber open. [Equations, open conditions and reproduction](marked/README.md)
+
+On a smooth quadric section of the sextic, an ordered projective contact determines a nonzero Prym 3-torsion class with a unique section up to scalar. Conversely an effective twist with divisor disjoint from its conjugate recovers the contact. The characteristic-zero sheet through the 11-adic seed satisfies these conditions. [Geometric argument and arithmetic checks](prym/README.md)
 
 ## Exact algebraic starts
 
@@ -100,6 +106,8 @@ python3 variation/moving_intersection.py
 python3 connection/fit_trace.py
 python3 quadric/canonical_variation.py "$packet/contact-span" variation/span.json
 python3 quadric/principal_source.py "$packet/contact-span" variation/span.json
+python3 marked/marked_slice.py
+python3 prym/prym_seed.py
 python3 lean/clear_core.py
 ```
 
