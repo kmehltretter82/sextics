@@ -1,0 +1,33 @@
+{
+  "numerical_points": 115,
+  "certified": 115,
+  "failed": [],
+  "max_newton_displacement": 2.3709027869483077e-57,
+  "max_lipschitz": 7.12784212165759e-38,
+  "min_localization_lower": 0.001170354845929127,
+  "verified_complex_sup_radius": "1e-44",
+  "symmetries": {
+    "identity": {
+      "cumulative_distinct_lifts_lower_bound": 115,
+      "cumulative_distinct_alpha_lower_bound": 115
+    },
+    "conjugates": {
+      "cumulative_distinct_lifts_lower_bound": 220,
+      "cumulative_distinct_alpha_lower_bound": 220
+    },
+    "sign": {
+      "cumulative_distinct_lifts_lower_bound": 335,
+      "cumulative_distinct_alpha_lower_bound": 335
+    },
+    "conjugate_sign": {
+      "cumulative_distinct_lifts_lower_bound": 440,
+      "cumulative_distinct_alpha_lower_bound": 440
+    }
+  },
+  "unquotiented_fibre": {
+    "minimum_max_lambda_abs_lower": 0.6662935896579643,
+    "minimum_max_cubic_coefficient_abs_lower": 0.9692478553848314,
+    "distinct_lifts_lower_bound": 2640,
+    "reason": "independent Q1 times a cube root of unity and simultaneous A,B negation; each fixes alpha"
+  }
+}

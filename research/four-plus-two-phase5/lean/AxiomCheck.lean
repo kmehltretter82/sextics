@@ -1,0 +1,5 @@
+import FourPlusTwoCertificate
+import RatioTransport
+
+#print axioms FourPlusTwoCertificate.ofCoreCertificate
+#print axioms FourPlusTwoRatio.transport
