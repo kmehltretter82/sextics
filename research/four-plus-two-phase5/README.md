@@ -76,6 +76,8 @@ A surface parametrizing tangent lines with contact order at least three gives a 
 
 For smooth quadric sections on the open set containing the characteristic-zero lift of the 11-adic contact, a rigid norm −12 anti-invariant divisor class detects the existence of a norm contact. The calculation excludes the exceptional rulings and conics over the algebraic closure of the residue field. [Geometric argument and finite-field checks](prym/lattice/anti-lattice.md)
 
+A complementary calculation over the base coordinates $r$ and $E=H(1,r,c,d)$ reduces the prescribed numerator to an explicit rank-12 connection. It excludes rational currents in the energy direction alone at every degree. A separate one-point interpolation recovers both coefficients of a moving logarithmic trace on a smooth genus-four contact over the field with eleven elements. The trace for the global curve parametrizing the contacts remains open. [Energy connection and bounded tests](connection/energy.md) · [One-point moving trace and controls](quadric/one-pole-interpolation.md)
+
 ## Reproduction and credits
 
 Use Python 3 with NumPy, SymPy and python-flint. The binary basis calculation uses Singular 4.3.1. Let `packet` be the extracted public four-plus-two contact archive specified in the Phase 4 README. Run these commands from this directory, with scratch outputs in a directory of your choice.
