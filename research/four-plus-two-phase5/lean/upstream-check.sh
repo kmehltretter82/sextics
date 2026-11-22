@@ -28,17 +28,17 @@ def get_pkg(p):
 with ThreadPoolExecutor(max_workers=4) as pool:
     list(pool.map(get_pkg,json.loads(pathlib.Path("lake-manifest.json").read_text())["packages"]))
 PY
-mapfile -t mods < <(awk '/^import Mathlib\./ {print $2}' "$phase_dir"/{FourPlusTwoCertificate,RatioTransport}.lean HodgeComputer/Verify.lean HodgeTestbed/Algebra.lean | sort -u)
+mapfile -t mods < <(awk '/^import Mathlib\./ {print $2}' "$phase_dir"/{FourPlusTwoCertificate,RatioTransport,SpecializeCurrent,UngradedCore}.lean HodgeComputer/Verify.lean HodgeTestbed/Algebra.lean | sort -u)
 lake exe cache get "${mods[@]}"
-lake --no-cache build HodgeComputer.Verify
+lake --no-cache build HodgeComputer.Verify HodgeComputer.Constructions.RationalFields.Calculus HodgeComputer.Constructions.HoldoutCover.HomogeneousField
 export LEAN_PATH="$(lake env printenv LEAN_PATH):$phase_dir"
 export LEAN_SYSROOT="$(lean --print-prefix)"
 export PATH="$LEAN_SYSROOT/bin:$PATH"
 lean_cmd="$LEAN_SYSROOT/bin/lean"
 cd "$phase_dir"
-for target in HodgeTarget FourPlusTwoCertificate RatioTransport AxiomCheck; do
+for target in HodgeTarget FourPlusTwoCertificate RatioTransport SpecializeCurrent UngradedCore AxiomCheck; do
     "$lean_cmd" -o "$target.olean" "$target.lean"
 done
-for target in FourPlusTwoCertificate RatioTransport; do
+for target in FourPlusTwoCertificate RatioTransport SpecializeCurrent UngradedCore; do
     leanchecker --verbose "$target"
 done

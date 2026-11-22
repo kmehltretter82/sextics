@@ -48,9 +48,17 @@ At the good primes 11, 17 and 23, the class with numerator $a^3c^3$ has a nonzer
 
 For divisors above curves in the ratio base, the part of their degree-one cohomology that can contribute to this sector comes from constant elliptic factors with $j=0$. Their Gysin images have slope $3/2$ at the inert primes. The branch divisor and the chart boundaries do not supply the missing class. Thus any successful rational chart primitive for this target has a finite nonzero fiber pole away from $P=0$, even with arbitrary base denominators. The poles $t^2=\alpha^2$ in the norm-contact construction satisfy this requirement. [Geometry and scope of the obstruction](cartier/vertical-support.md)
 
+The same slope test now excludes all finite unions of linear physical core divisors as additional fiber poles. The degree-23 Hessian calculation controls even singular plane sections. [Linear-support exclusion](cartier/linear-support.md)
+
 ## Reducing the unknown boundary residues
 
 In characteristic zero one can move the complementary source residues to a single smooth parameter point by replacing the closed input by a cohomologous meromorphic form. For an exact change of input we give an explicit correction whose moving fiber poles cancel. Producing a globally admissible principal part and evaluating the remaining traces are still necessary. [One-point residue formula and exact-input correction](one-point-residue.md)
+
+## Which closed input to trace
+
+Three cyclic coefficient variations force scalar action on the target sector for a correspondence extending over those directions. A second argument computes the possible actions of the generic total correspondence using its six symmetry graphs. Consequently the literal input $A=a^3c^3$ suffices up to a constant for the generic total family. The normalized rational source and its correction are still unknown. A Lean specialization theorem permits a generic rational witness to have a finite pole at the catalogue point. [Exact matrix checks](variation/README.md) · [Generic total trace and correction](variation/total-trace.md) · [Moving-degree calculation](variation/moving-degree.md) · [Specialization theorem](lean/SpecializeCurrent.lean)
+
+At the marked smooth contact, differentiating in the $b^6,d^6$ directions gives all 48 complementary test forms. The 96 compact tests have a unit jet determinant. Their unique local solution of order at most 96 has order exactly 96 and fails an additional boundary test when the interpolation divisor contains the poles of the slice coordinate. Its six computed seed residues are partial contributions. [Normalized jets, target pairing and boundary obstruction](variation/seed-tests.md)
 
 ## Reproduction and credits
 
@@ -82,7 +90,16 @@ python3 cartier/good_reduction.py 11 17 23
 python3 cartier/inert_trace.py 11 17 23
 python3 cartier/target_cartier.py 11 17 23
 python3 cartier/check_coeff.py 11 17 23
+python3 cartier/plane_hessian.py
 python3 quadric/cartier_naturality.py "$packet/contact-span" cartier --full
+python3 variation/certify_span.py
+python3 variation/certify_intertwiner.py
+python3 variation/weighted_intertwiner.py
+python3 variation/trace_determinant.py
+python3 variation/moving_intersection.py
+python3 connection/fit_trace.py
+python3 quadric/canonical_variation.py "$packet/contact-span" variation/span.json
+python3 quadric/principal_source.py "$packet/contact-span" variation/span.json
 python3 lean/clear_core.py
 ```
 

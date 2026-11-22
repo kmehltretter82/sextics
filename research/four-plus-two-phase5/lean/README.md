@@ -26,6 +26,21 @@ clears denominators, checks homogeneity, and expands the exact core polynomial
 identity. For a number field, pass its exact SymPy domain to `domain=`; the script also checks a control over $\mathbb Q(\sqrt{2})$. A rational current for the coupled core remains
 the missing input.
 
+## Arbitrary polynomial core witnesses
+
+A verified four-variable identity with $D\ne0$ and arbitrary polynomial numerators now implies the protected statement directly. Multiply all inputs by $X_0$ if needed to give the lowest denominator component positive degree. If that component is $h$ of degree $d$, set $p=d+2$ and use the finite inverse series for $D$ against $h$. Its product with $D$ equals $h^p$ up to a term of strictly higher order. Taking the homogeneous component of the cleared identity in degree $2dp+6$ gives a homogeneous core witness with denominator $h^p$ and numerators of degree $dp+1$. The proof adapts the Phase 4 packet's expansion and uses the project's existing homogeneous-component and finite-inverse lemmas. The `hasCertificate_of_ungraded` theorem was independently replayed on upstream 4.36.0 with the standard three axioms. [Protected closure from an ungraded identity](UngradedCore.lean)
+
+## Specialization along a pencil
+
+Suppose a current for $P+\varepsilon S$ has source with constant term $t^4$ and no negative powers of $\varepsilon$. Let $q_j$ be the coefficient at $\varepsilon^{-j}$, allowing a pole of order $m$. Expanding the identity gives
+$$D_P(q_0)+D_S(q_1)=t^4,\qquad
+D_P(q_j)+D_S(q_{j+1})=0\quad(1\le j\le m),\qquad q_{m+1}=0.$$
+Then the specialized rational current is
+$$Q=\sum_{j=0}^m { -2/3 \choose j}(S/P)^j q_j.$$
+The factor comes from the identity
+$D_P((1+\varepsilon S/P)^{-2/3}q)=(1+\varepsilon S/P)^{-5/3}D_{P+\varepsilon S}(q)$.
+The Lean theorem proves the finite coefficient formula by telescoping for any finite set of derivations. It starts from the displayed coefficient equations. A rational function in the pencil parameter has only finitely many negative Laurent coefficients, so an actual generic identity supplies these inputs even when direct evaluation at zero encounters a pole. On the ratio chart the result feeds the existing transport theorem. The proof passed kernel replay locally on 4.33.1 and on the Google Cloud worker with upstream 4.36.0. Its axiom audit lists `propext`, `Classical.choice` and `Quot.sound`. [Finite specialization proof](SpecializeCurrent.lean)
+
 ## Reproduction
 
 Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
@@ -34,8 +49,8 @@ Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
 current fails for the catalogue core.
 
 On a Linux host with elan, Git, Python 3 and the standard Mathlib build tools,
-put the four Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
-`RatioTransport.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
+put the six Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
+`RatioTransport.lean`, `SpecializeCurrent.lean`, `UngradedCore.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
 directory and run `bash upstream-check.sh`. The script pins upstream sextics
 `2388542bd16eb4df849515418e1c2ab291e6dc6a` and loads the toolchain and
 Mathlib revision specified by that checkout. `HodgeTarget.lean` was generated
