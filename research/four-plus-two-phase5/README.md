@@ -68,6 +68,14 @@ Three cyclic coefficient variations force scalar action on the target sector for
 
 At the marked smooth contact, differentiating in the $b^6,d^6$ directions gives all 48 complementary test forms. The 96 compact tests have a unit jet determinant. Their unique local solution of order at most 96 has order exactly 96 and fails an additional boundary test when the interpolation divisor contains the poles of the slice coordinate. Its six computed seed residues are partial contributions. [Normalized jets, target pairing and boundary obstruction](variation/seed-tests.md)
 
+## Cubes on projective lines and an elliptic cover
+
+For this particular sextic, the projective lines on which its restriction is a cube form a finite scheme of length **2,628** over the complex numbers. The count includes multiplicity. Of the 60 lines meeting the coordinate line $a=b=0$, 48 are simple and twelve have local length three. The argument uses all six Grassmannian charts to exclude contained lines, then isolates every point of one Plücker hyperplane section inside the full cube locus. [Equations, arithmetic checks and count](lines/README.md)
+
+A surface parametrizing tangent lines with contact order at least three gives a generically finite elliptic cover of the threefold. The prescribed class pulls back to a computed two-form on that surface times the fixed elliptic differential, up to an explicit exact correction. A different projection gives a rational current for one summand of the prescribed numerator and leaves an explicit remainder. [Cover, source and normalized projection](asymptotic/README.md)
+
+For smooth quadric sections on the open set containing the characteristic-zero lift of the 11-adic contact, a rigid norm −12 anti-invariant divisor class detects the existence of a norm contact. The calculation excludes the exceptional rulings and conics over the algebraic closure of the residue field. [Geometric argument and finite-field checks](prym/lattice/anti-lattice.md)
+
 ## Reproduction and credits
 
 Use Python 3 with NumPy, SymPy and python-flint. The binary basis calculation uses Singular 4.3.1. Let `packet` be the extracted public four-plus-two contact archive specified in the Phase 4 README. Run these commands from this directory, with scratch outputs in a directory of your choice.
