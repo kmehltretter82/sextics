@@ -43,6 +43,16 @@ The factor comes from the identity
 $D_P((1+\varepsilon S/P)^{-2/3}q)=(1+\varepsilon S/P)^{-5/3}D_{P+\varepsilon S}(q)$.
 The Lean theorem proves the finite coefficient formula by telescoping for any finite set of derivations. It starts from the displayed coefficient equations. A rational function in the pencil parameter has only finitely many negative Laurent coefficients, so an actual generic identity supplies these inputs even when direct evaluation at zero encounters a pole. On the ratio chart the result feeds the existing transport theorem. The proof passed kernel replay locally on 4.33.1 and on the Google Cloud worker with upstream 4.36.0. Its axiom audit lists `propext`, `Classical.choice` and `Quot.sound`. [Finite specialization proof](SpecializeCurrent.lean)
 
+## A fixed affine denominator
+
+Set $(x,y,z)=(b/a,c/a,d/a)$. For any nonzero $B$ in the three-variable polynomial ring, natural $n$, and polynomial triple $N$, `hasCertificate_of_fixed_support` takes the following identity directly to the protected theorem, with $h=H(1,x,y,z)$.
+
+$$
+2B\sum_i N_i h_i-3h\left(B\sum_i\partial_iN_i-n\sum_iN_i B_i\right)=3y^3B^{n+1}.
+$$
+
+The identity is linear in the unknown coefficients of $N$ for fixed $B,n$. The proof verifies the injection of the affine coordinate ring, its compatibility with partial derivatives, the lift of $N/B^n$ to the four-variable fraction field, and the exact target. It uses coordinate independence from the accepted cycle-three construction. The source passed independent kernel replay on Lean 4.33.1 and upstream Lean 4.36.0, with the three standard axioms. [Fixed-support Lean implication](FixedSupport.lean) · [Geometric criterion for the choice of $B$](supported-residue.md)
+
 ## Reproduction
 
 Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
@@ -51,8 +61,8 @@ Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
 current fails for the catalogue core.
 
 On a Linux host with elan, Git, Python 3 and the standard Mathlib build tools,
-put the seven Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
-`RatioTransport.lean`, `SpecializeCurrent.lean`, `UngradedCore.lean`, `RationalCore.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
+put the eight Lean files (`HodgeTarget.lean`, `FourPlusTwoCertificate.lean`,
+`RatioTransport.lean`, `SpecializeCurrent.lean`, `UngradedCore.lean`, `RationalCore.lean`, `FixedSupport.lean`, `AxiomCheck.lean`) and `upstream-check.sh` in one
 directory and run `bash upstream-check.sh`. The script pins upstream sextics
 `2388542bd16eb4df849515418e1c2ab291e6dc6a` and loads the toolchain and
 Mathlib revision specified by that checkout. `HodgeTarget.lean` was generated

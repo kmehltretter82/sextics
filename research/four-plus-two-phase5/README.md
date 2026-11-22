@@ -18,9 +18,11 @@ On a smooth split quadric $Q_2$, the restriction $f=H-Q_1^3$ has bidegree $(6,6)
 
 For a fixed moving fiber we also remove the deck and sign choices. Writing $Z=\alpha^2=-U/V$ and $L=Q_1(1,r,\alpha,s\alpha)$, the normalized quadric $Q_1/L$ has value one at the moving point and $L^3=P(r,s,\alpha)$. This leaves nine parameters. The source for the prescribed input is invariant on all twelve presentations of a generic quotient point. An even moving equation gives an explicit formula there. On a selected component the degree reduction is governed by its stabilizer. [Quotient source and trace transfer](quadric/quotient-source.md) · [Four-edge reconstruction and fiber bounds](quadric/finite_chart.md)
 
-On the marked chart, eight equations in eight geometric parameters suffice on an explicit open set. A complete one-parameter slice at the marked seed over the algebraic closure of the field of eleven elements has exactly one simple solution across all 64 axis choices. This calculation leaves the degree and trace of the full moving fiber open. [Equations, open conditions and reproduction](marked/README.md)
+On the marked chart, seven equations in seven geometric parameters suffice on an explicit open set. A complete two-parameter slice at the marked seed over the algebraic closure of the field of eleven elements has exactly one simple solution. The finite algebra used in the seven-variable reduction has rank 480. This calculation leaves the degree and trace of the full moving fiber open. [Equations, open conditions and reproduction](marked/README.md)
 
 On a smooth quadric section of the sextic, an ordered projective contact determines a nonzero Prym 3-torsion class with a unique section up to scalar. Conversely an effective twist with divisor disjoint from its conjugate recovers the contact. The characteristic-zero sheet through the 11-adic seed satisfies these conditions. [Geometric argument and arithmetic checks](prym/README.md)
+
+The fixed-component support argument also gives a way to search for the rational current directly. A polynomial containing the swept surface can be defined by a perturbed resultant. With that polynomial fixed, the numerator search uses linear systems and is guaranteed to terminate, though its required size is unknown. [Support construction and coupled control calculation](marked/support.md) · [Residue on the literal affine core](lean/supported-residue.md)
 
 ## Exact algebraic starts
 
@@ -107,7 +109,12 @@ python3 connection/fit_trace.py
 python3 quadric/canonical_variation.py "$packet/contact-span" variation/span.json
 python3 quadric/principal_source.py "$packet/contact-span" variation/span.json
 python3 marked/marked_slice.py
+python3 marked/marked_plane.py
+python3 marked/support_projection.py
+python3 marked/support_tangent.py
 python3 prym/prym_seed.py
+python3 prym/prym_normal.py
+python3 prym/prym_syzygies.py
 python3 lean/clear_core.py
 ```
 
