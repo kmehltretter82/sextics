@@ -77,6 +77,8 @@ To replay the interval checks on the recorded run, use the companion `certify_ro
 python3 refine_orbit.py orbit-vm.json.gz verified-roots.json.gz verified-summary.json
 ```
 
-Global completeness would require a degree or fibre argument for the relevant localized irreducible component and verification that its sheets have all been accounted for. The degree remains open.
+The script `python3 current.py orbit-roots.json.gz` also verifies the current contributions on the 115 recorded sheets at $(1/10,1)$. Their unnormalized source sum for the prescribed input is approximately
+$$(1.44250184+0.638266326i,\quad -1.11309629+0.671339088i,\quad -0.589217391+2.78699774i).$$
+All three enclosures exclude the target entries after averaging these 115 terms. Completeness for the selected component requires an independent degree or fiber argument.
 
 The contact and trace circuit come from `benediamond` and the four-plus-two discussion. The code uses the exact binary shape coordinates in the enclosing phase-5 packet. [Contact family and chart](https://github.com/hodge-computer/sextics/discussions/120#discussioncomment-19448881)

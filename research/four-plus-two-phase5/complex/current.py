@@ -3,6 +3,7 @@
 import argparse
 from functools import reduce
 from itertools import permutations
+import gzip
 import json
 from pathlib import Path
 import numpy as np
@@ -147,7 +148,9 @@ def main():
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--transport-test", action="store_true")
     args = p.parse_args()
-    rows = json.loads(args.endpoints.read_text())[: args.limit]
+    opener = gzip.open if args.endpoints.suffix == ".gz" else open
+    with opener(args.endpoints, "rt") as stream:
+        rows = json.load(stream)[: args.limit]
     ctx.prec = 320
     r, s = acb(1) / 10, acb(1)
     step = acb(1) / 10**14

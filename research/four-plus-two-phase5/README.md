@@ -40,7 +40,17 @@ It follows that the degree of this projected surface is at least 65. Its irreduc
 
 ## Rational corrections with specified fiber poles
 
-For currents whose fiber poles are confined to $P=0$, $t=0$, and infinity, reduction in $t$ turns the problem into two base derivatives of sections of a rank-three connection. Either base derivative alone is insufficient, with arbitrary rational base denominators. The finite two-direction tests and the restrictions on residues along moving base curves delimit where a correction in this space could live. The moving poles $t^2=\alpha^2$ of the norm-contact current are a separate part of the full trace. [Derivation, restrictions and reproducible tests](connection/gauss-manin.md) · [Equivariant elliptic maps through degree five](connection/elliptic-fibers.md)
+For currents whose fiber poles are confined to $P=0$, $t=0$, and infinity, reduction in $t$ turns the problem into two base derivatives of sections of a rank-three connection. Either base derivative alone is insufficient, with arbitrary rational base denominators. A class-specific Frobenius calculation and a geometric analysis of the possible supporting divisors exclude this whole space for the prescribed source. The moving poles $t^2=\alpha^2$ of the norm-contact current are a separate part of the full trace. [Derivation, restrictions and reproducible tests](connection/gauss-manin.md) · [Equivariant elliptic maps through degree five](connection/elliptic-fibers.md)
+
+## The prescribed class and its fiber poles
+
+At the good primes 11, 17 and 23, the class with numerator $a^3c^3$ has a nonzero Frobenius slope-two component. Two independent coefficient calculations verify the same stable ranks, and direct point counts recover the traces. At 11 the canonical differentials on the smooth contact curve independently recover all 2,304 entries of the ambient Cartier matrix. Another 240 entries on five later coefficient rows check the result. [Class-specific calculation](cartier/target-cartier.md) · [Contact curve check](quadric/cartier_check.md)
+
+For divisors above curves in the ratio base, the part of their degree-one cohomology that can contribute to this sector comes from constant elliptic factors with $j=0$. Their Gysin images have slope $3/2$ at the inert primes. The branch divisor and the chart boundaries do not supply the missing class. Thus any successful rational chart primitive for this target has a finite nonzero fiber pole away from $P=0$, even with arbitrary base denominators. The poles $t^2=\alpha^2$ in the norm-contact construction satisfy this requirement. [Geometry and scope of the obstruction](cartier/vertical-support.md)
+
+## Reducing the unknown boundary residues
+
+In characteristic zero one can move the complementary source residues to a single smooth parameter point by replacing the closed input by a cohomologous meromorphic form. For an exact change of input we give an explicit correction whose moving fiber poles cancel. Producing a globally admissible principal part and evaluating the remaining traces are still necessary. [One-point residue formula and exact-input correction](one-point-residue.md)
 
 ## Reproduction and credits
 
@@ -67,6 +77,12 @@ python3 complex/certify_roots.py complex/endpoints.json
 python3 complex/current.py complex/endpoints.json --transport-test
 python3 connection/gauss_manin.py
 python3 connection/base_search.py
+python3 exact_input.py
+python3 cartier/good_reduction.py 11 17 23
+python3 cartier/inert_trace.py 11 17 23
+python3 cartier/target_cartier.py 11 17 23
+python3 cartier/check_coeff.py 11 17 23
+python3 quadric/cartier_naturality.py "$packet/contact-span" cartier --full
 python3 lean/clear_core.py
 ```
 
