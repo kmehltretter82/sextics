@@ -53,6 +53,15 @@ $$
 
 The identity is linear in the unknown coefficients of $N$ for fixed $B,n$. The proof verifies the injection of the affine coordinate ring, its compatibility with partial derivatives, the lift of $N/B^n$ to the four-variable fraction field, and the exact target. It uses coordinate independence from the accepted cycle-three construction. The source passed independent kernel replay on Lean 4.33.1 and upstream Lean 4.36.0, with the three standard axioms. [Fixed-support Lean implication](FixedSupport.lean) · [Geometric criterion for the choice of $B$](supported-residue.md)
 
+The sparse solver assembles the coefficient matrix over the rationals for a specified denominator, exponent and total numerator degree. Each recovered triple is checked by expanding the original identity. The optional dual certificate for an inconsistent system is checked on all input columns and on the prescribed right-hand side. On the literal core, a control with $B=1+x+y$ and $n=2$ recovers the original three numerators uniquely. For the actual source $y^3$, $B=h$ and $n=1$, allowing all numerator monomials through degree six gives matrix rank 240 and augmented rank 241. This bounded test exercises the solver. [Exact coefficient solver](fixed_support.py)
+
+```sh
+python3 fixed_support.py --control
+python3 fixed_support.py --B h --n 1 --degree 6 --dual
+python3 fixed_support.py --verify fixed-support-control.json
+python3 fixed_support.py --verify fixed-support-six.json
+```
+
 ## Reproduction
 
 Run `python3 clear_core.py` with SymPy installed. The nonzero control uses
